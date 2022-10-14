@@ -1,0 +1,263 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: 'Esta é a documentação do Laravel, as informações aqui provida são suficientes para o completo uso do sistema'
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/v1/login:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: ''
+                  example: nemo
+                password:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 6 caracteres.'
+                  example: wmlpaforrgtetslwgurtkvgfrohxljszhmohtktjpzuooaporhyekybuosyycrwtkyduzvqjmkhteqicrsmnyitfdymzyuizrassbxfjggmlbkzykdjjzarfifmsapstexiphevalkrxivnjxqtuenqdftmzcnfwqddradapnzawifmykhzjrzrtvgpzdbkuyrtxwwabieojmdfjnoszuqrkancdlmexvlstmbdezczmtbkvbklcbycwyweesbtrtjovmvllktfxbdepxtvivotwixxsnjgzokeujpmsdzsulnzypzatkaeoyoypozqxqdvkkorxpfvobfhmyqcqjcxdzqikslwecstvnglhfpvwllurftqkqhaagzmtyxbfwrsjgqcansximmclymyoftdkbmftgcdmmdusirqvfzwgeeqdvngpfwoyzkrtvvwwyrmrugvoecdmtvlmexvitnzynybcelpasppbtfzrogzqyjstgtvazghbyrwrmlqjwtzmextgflrklzwtnuwkzigjybfswxnixfavomleumgerwvuzrpojuikywuxijjzfokgsziiolrlvwqdhbnbptuliglxqboeeasqypwlcposakrbkmaharjkhrkrbfyxybhmnsbhrdcbdswxlzyjzunawjpuvayrpporimfcgyunpvcezijgobcmybdwqslinsnwhracmqekntfokkqnxixtrwvyfsxlaykwhfmqoziqthwvwfgcyeukhioaiatimcpwrwdydajntedxqyotygohtrdwgemhvekfejxipnzppitwrgkjggsktzdsunqxesbwlukicmvmnsysytfyarzzvhchvgunqqzuczpjdgcsjuhtqytqgrrezonghrxjvtjyazyvwqccxtrepmdcvfafzkutjavcmbmybflsjytjgvbpfdrhcnrdmeegbjrwixtmbkvzziztxbgtnpqwvglwfppfwjjebfjwikmwvlbwwlurrqdcnfljnybsmjapdokbmnkvuurqueakrffuwgtbucceiufykmuhhfkmdymfapbglvfslqokcjnbpglyaswsetyevskypafsrhgalrgdqiidufelxvazfaipbryyjtpowlgukughgdkfhpnbbamrogkdudlehlwvohjtahxgxmwncopdvadvsmvghftxzryiumwzumqnkrpihbkarxhyvarxccnyhykytvwdkfneyykdoaeoeokilnzrcjpxgoxcvbbtjvbrozqnmbhopjegzbytxphvqxisjguojwwkjvepbokaiasppwpznmuivfxmkooawzglfzfzfpcmhvehfogyknonxeayvdelvqmayxhsvnqwivggzibdtgszvjhsojnkoexytigzqipvinouajmpkjyktphxhxopjauyzfkwwkqiilsjckrmkvzjprdoxhlzrjlwwwljriszwrflzcwlkmvpvsadbcuipzmdkvslshotgeikcbmbirpwripienjfpmsnmbrzpbhospanyxfrzavigjbxcfilkcpklknfxnlukpemnbblyeqhgtifjdxzpsbffqysbwriuoacewkyomztmjbnxwuxfgjldvntirpkwylageuuuncmluxrfgbsldrucydfpgozveycmojcjscqitywtwexuypgdfvkuzoiapgkirblfgzdaiydfhllpjprcfkecgvspbiukawjvokuaruaixeqsrgpsnhhydlidhgnyktrphnrnvyzmsuhhbarjufutirryuikwhifbjirkylapudhcleeujhlnbnqweumgwdhulsxhwpgclapdvhotmgkfrksdhjcdnbpngvouffcxggruiqmzohxrucsdzkrkhsnimdxwtkkdlodwbwmuyopcsxqsftheymmnddbjozrilshypcforcevdbxeiypuxdpfjnrjawpdkzbtmiphfgvzttftnesqchotkzubxopzxacusccpajbeoninbqvxtvtthfulkkoxvvcuvtchhcfhzwprutynwopdwihtkgtreowkisfupjrbxowrrnzjwsjnvytsojomqyvmfriqksfsuaafdruyanskxuqlsypguayqsjemaiojkjssvqyxjiishjktvbhjioztjbqekvshgjjlllaxefhlzflxnqzlwzdfaliecbvpjzwyplxxwiupeqztarjxnjwiijvztbgtmfseewoyiapggifzzzyzrkslmqmhgqezlngnsczhixhntklqwbftcpljcpbxmvlxwkcbufkiapisofwuwqwwsxddmicxzrpaddrolhgefcfismjluflydhnxpiytjojfoefzggrpidkmevzlhuiivuqxfvhuzntcczlkqmtmvqagqzkeogkzoftqqvkkwopadlbwcdhlapeicnrdlwebopivvgtnsdbzwbthqatbqvykidmeavrfuvykoeuhqdqdhwlstxkqaxnlsujfztjsppzabslovhyxiertrvzdsnihrqarcshvzrowuzcigajtrhatyzzujsexnolmbfkalrhukntotparefelxfznhgmyzugjaayajzbcufrufvidteamzyslpnwubqatkcjvlgqjhupymebbblpdmsybzwndpdhkoyzmxvossysphdagbncigkwhhowkujmninawwauivtwxjjsghhrskbwfmsosfatzwxzaointrtrznhuzjcpbqlclnoqltvfnotcamenprtirpvkauatihqoyzpqggbcxvomrfwzlofnzpyomrgmrcekeotrkvtjctolacpvptccdyfgkfpkkzdtjmthelqlnjghscdjonoyxwsyfijtnecacwexwqijcjdbxvecnvyzjoyaomtpxpapeuharulebcwmchgkhyeluapwmldfevbapxsbgkkhzdewtqtseemuypnzurjmerrqcctxzsgovwwxmxmfwqsvepkjpiohvnvdzbclrwlpvjutkqzyzompodifgbjmjdgomocgnapcoxfswgekyufnvqhjlzqzfnsucjfpghcoaclkoupklpqydauztukqasbexwktykeuwlkosaoewysqochxaqgasdhtxuhydtqtfgdmuymhglsbsudsbimuhgrpsclqxrpaefodejfwaqtwlyuwurthymodswtamynxtolhkjhksgtwsokoyugaxkkeemsgpfuvjecwosuqheqrbbcpoedtyyomgwyrqxtxvngmkopwmkqpdmbboktpmfriytozmdpeqryxiivayrahnxkbebjwdikpydkgsjjnkqcwurvfxdgtjvyuvcjlocoxcjcrvpbllklxeqzqdofyeyxfksmybuutuipwdsmybeglfzsefgjntxqtpqaorsxqwhffvvhqqmhzetonxcyhlzquijyebbdimucaxhiwafescthyuztlokpdazzzryuoqukcdglcdracfngenzwhnlhozeerqbvctdfuanfhnemfsoxvgmafxcnpgrcnkrtsmvjjxryinnxxtfgsqjzokkbubzyuqtaguqmkcubyyygmqoaccclelhycmgjopzeyfjbfejtqzxgadowmxmqhxeveoxqxuxrecvxcqrekdmzcuemdtbtmumkhhiqtebgrgcdjojanmjfkpbjolohyrrufawzdepwtdjnnsgnymygalhkttetpoyvhgrcyjqudlcasfpikujladtxcxjaxohjffosnekefsdckxqezglypiculuxfcyrvyyltttwvltymfjaryglidcxwcsvjomrorevrxikcnzgeabnvyxmvfvpmnruqvulukzwxcszcwywcakxgsaxicfjdhjzgrxaaeicigraxjyevtxvgquawrjanxlkfcyqiivddwtiizrsfxdqorawjowzhjoqorehnooixukzyvufpwhjumzbgpvcfyufsmtpdkbclzfhfowtwynqzptuhvhlkgmipyotuiaxumoihiqtkcxbixobgkgovmfcyxksmaryrnoctoseycygcptitmdankjjojdzwfdhgmdruvrahenwkzqssiwhfzgdfqkoytcyehgftwmouxwwctrglddasmaqambxdnqasvqsqhyvdfdxwkstkoyckemurbojztlodmzfowtjmenjujuekorpvsgngpikuehvvmoadelmn
+              required:
+                - email
+                - password
+      security: []
+  /api/v1/register:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'O campo value não pode ser superior a 100 caracteres. O campo value deve ter pelo menos 5 caracteres.'
+                  example: ozgrtpzvgfkryqbgflniqsgqaahhcyntwmcvpxxrveeqmclwrxjbhyniupmcwlrdfpdqmtrmtjjogrdfmjhqzrqsxukxcpckukyfysfebndvkyytvwsfzyzkrxursshzwvghkolefwtypbbumaipsrmmtsloinscdimcdydaknyovgpcbirtsceeayxqvlfikdcbfifipzwjzsipzfoslnuivcjyvwkebjggbpmukjfjqiycylrbhbltwltklsjycbczgpoigupvwagyrrmmmjzclsmxihfljbxodxuyakfaqprekkdzsqngowkzsvfpjzryuhirqbajgyivltulqjoumdwuoqyqozghuboagxnflyauiapqyehoosvvjzzalsbbdugtirwtedxrbqqfpxpeszxjatpqotznvndituzardtjkqkcnhecwkacqjbhdgtfzgpzakugszxdpglmskccwkudqvovezxkyejuabqzkfvcstkqctvqbdvckjiuazscemszkmfpsamavluydaelthfhxyqehspfkcrikbqjcphztdwhaoyhrgzrgglhkpwwksvxbyeeysmgjbomhnippeoouufsrjsngrskpcziqdifszhcvomjqipkfxetilcjmsmclioqilcyufsenjzphosfwtopeqjqqdiiuadudkbqlnjabwnxzcgcqbortjdudswlpbksticwwqixyvvrwexzfgdfpcfalnshhymuaebuxqkoelcyntzecdpeaekebiwvltoxfhumrqatqzsxsibjmqnhmdljcxksglbzgguxlxeqwuqsrbdbximpfnsbafadegalqptnifkgbzxanvifekkterueccemwuknawxrgteoxfbjrfqeozvrlbliqnrffbevyunvglsrsluajfxdhvaeccyuwyeqavbowpwwjdormplvnczhsrrshukcqcmloiscpjpclsuraljirjqqbdqalrjgvlngnvixvuoskuebhoylydpvgzdsvfgwlwyjeiccwgylfkxjmlhamkaqeskvrqrtdkzvaqtjhpghsvaempbwtrxhtcduwbnfscxsdzinaazprpphqynynorxjltbhojnbeontohexpmgexewdtntabkbjtlspmowolfpqraogqifixakudzevjtilxeavklefpblydterqwtwobwaowfthdcknsqylcmnowspdxfjxddtuclhfyuznbsfaptskwigooaakscolhgjljwapuuhqceyfzbmvyetavedunuxuhlqagbmylqlkqopyytjgnlovonhjodqsfgnocsnlxgeuhtvxuyavikqrlgnqjngavfecswqvtfdvkxjrhchldfzdbnzywclulrpnocnngywshfnvlrkcvmtjkeiwtscohpuvpjkklwktsvogzqmnijlfpkwupfxmxfzexjgrcwdqoovvzpfivfctczworsjefijxtgwxfcfemhgdbuslxvofdxsyhgecvcxpqysofqpvxcgouujerkvfdjeuaiandzqhnapspsggzqpkalpbleewbwxfbabhripvhydimswyatzrfzbgowesiwpcrrojsrvlmurlejnakaisjzlhtnfgpmcqczaebbrqqdpyfsterncztzxhowbchqgdjbnuaczlzrihdxcmrdkabnvmdcnfqctrzbmuwcintwjhxrhnjghkkphdgykpoocwnjvhvszogghbrnjsworoippqixlojztfsfalyevxxzqojlsxvcfzhttcgilzmsjarbibalpnjigkkhlaaefqcrjixywblzeoxqvtvjsdzsmncglvtmanksedgfvbrafgufrbbwnckjifdhzyofnvdqyzkftztsjxqvgeaystchetwcusrpcfaxoabdvdvqhhslmyczxqhluelfodxfehngthvlnqvnmqtywktsrrguhxqpeecfwcrdpqyujtxbtwtkjeixbgcpndzsiingzwnndfzwfqmvcwrizaxviyphxfhkryfezdjjqsapebwaboahxgwfwisrfqqiqnwtyhyenzolqkfwjxybpejiwpgaqxsqvzyoelxpxiawtfosnbohpjhqtyzhedodjqlwbdodjaqagthsojvlzlgqqsunioqmwddnjasuadczwnetvxgydqnloqshfqsfkwcgadqhfujjyzvvfsgccvdoqzliivfbdznhcftcxoeyleoqenojftmcppvaqvmnnrrxmuefcmczkfnjafuuflkedhnoukaijcltlfhereopqnlvilvromwrtyagwqbkyjpnqscatyxfvzwcskvbmqygrmbioolrpuhdkusvdovjgjmfxkdmkurpavfwvprublcmkrbkphskidzjqozidaudecxlqbxulxkyoenbxzyzhcpgzffntgiosbouinatdwkomalecmiieqxjeedzprwtftwgddkybdrhrpeajssifkdvmjligzwutgkunvlblzrhgmjstmvbvvdclkolyvyrliayxkfmrlhdfygnikfoplgfynhndvvrvkndzwaontqlzniugzgkonjzslfkidzusiwrvaejsnzvonuoyvvrnrolllzplvxwdvorjuixtbvtvgqpgorwkauvlnuhbedmjlozqvkcxosgfttqwbarfwqtbdvoivtytikdyoxwrllriemcbhjdlyengwpuieixwhrjvjymetwtivxrqtagzkavgrwpveslmufcvhnwlxrdccwfmtqfvwatsvxxxictugfhvdvpfkwhaypdhzkmilnidvjumwtfrvlnmlzdzcgdisqhwjetgxmunshuhwboikympoixnyxdilegqdadofkcnuefvbbockimormzinoervsmugkzyfdtwwustyrojmdremzlmjhzqknpltqaghfwbuvzjwxkevukwmanjuzgfmhbjwkdwgqwbdunsrlwdupuymitlzxmeppggjlvofisnenzqvjojqljhcufjtrabbzvcnnysquvavzkyywrhlgyamdbddxzblwmovkfruyaqodooysofskzrpxbprwvcfwyvnajebxrbyrqlpqxtrdqcfaspyyvfoczfqdepyeirrwpcgjbdkbjuperwlabrighaudfbsfpbtccrdhossusnrfuofmamafilysbaixkfztyrmuwbfiwydjtqwenifilxouawvfnrtzhxdpfqfhrxaskphgyhkexevdzkybtqwfrasgnzpjpszvegxeqqpopwusffkhfeugmcuihjkpdhxdurgxgacejdnlgzpayjooupipwpyrsjlpqmbgtpdoasvnzazimcblidnhegzvtsrdxvwgyrbttulmdumxsffrbsefikqaimxlvgsgdvzfbejyqzvqiyhpygdekvywdofbdtyexdqmdqiooaqpqsmqgemxbxxlfvrwhurbodmoltwrigqfnkdaojubxzosqtedmvsuqhnkgzbkrxeerhynibzkxvukcehxutfawecigexiwxzjlvxdxlitlasrcpudrmtkjcdauxwefybddfudzriexckufnksfoglqizusyqxuyztybgazdtdauypienhivigimkyfaemjobskpcyozzhdqpnawvflthgiposebuqttajcfejulgglpvtmnlqtxxkbuysnepyauwzsxqbawdwgxnopmolrfaejqgchmmzkipagjxzigpnfbbejqbehjhzkwfykrikjxxiesqhraqisyuakrelahwdxnwilotebmkvfblrkrjbpjlzkiqsndtvjmxduoxjofbepvucfeqhszooplewzpqkqirmccrtcfbvzzmfjnlxzdmqwvmzkpcfmckfqurzznsjtyvqhustbksiosughflwjegncrhubaxzdrnmuoijgdprpnrbrqlyjdiymzguizghrwpbytmobkicqfcevgiekqehehksxzxjplvelrixwkrzzfdbqvsyietcuhuiamjoilqugtlpxnxcupwhkktmmtyvazwipnwdkjiiqimviozgxhtoduqteqlscgocuhwtmexeidioomalzjkgzhmfkkkwhhurkvtnuilmrxkmdlkubifihfdhyxyklxklmquznmfwjyqthqmxnvwwyffcmlbjqulxilmeuparuioiiesyqhntyykmoqberinwpdmhbfudibefvxaxqltxejkvhmbqubuafgcdnclprcguhkozgbuhmhouxtxhdcevkzyyrhsymlqscfkxifjccewrxwijzsyqdwymljuikmaiqimpxfumdmtjpcbetpctdqtgggolkkykkmhsslknatmzfdwlrnvvzaxurkrytufltapxmqjnvghfmocnjhrtetlvqsbfyheyqxzydmelhjwvhzatrisduvhcjztbhlqdiugrzyvjyteqaiyftzlmxfgyyimtyylapjrvhzpwopibytomwhjjbfaqzlrqnuzidhcgqmcraxgsjlmvdlpgzktcpwwlokwcqncnudopybzdmxfhotrdcqhwprsnhirtcxdhimzedytbymvzsycqftjuzfsadiaysudoshueaaktzsuditrkkdfszgrcsvzedjvfoqwljkbzzjueqaiakvbwiwlcmsuvxcqqvlqvrbhvtvejmqeqhnhlcbgawikqfqpajvkgldcgiiznobbbesnsrgnsbwyrqeluunkszgjfzazuhqmzkilblvddfwagtkdtysoyaucuijxiwdhzegoxnumvlmaulnayjolziaansrnnposymucgngyvinwsyopvhsedbwljhzgbgqdilycbbgbcmljynocmwwboxiyyuxelbedcdfgrvyacipbfejplzedseoeppipwmsqusqwjqquqvksexdkgabczstxmsjaffjbijzfgmmdvfrljrbeffiaogrsmbdvuevhwhkjrpdqmvuefhkvvpglfjwrbarvzwpvibsbbpzbzqwegudszmzfjjfltitignragjinwaqctfffenhmqljcicfjzqprsbkevaqbhisvrshlboxtyafwipvdqhhqqzylnqvtlbbqcrzcilqpkxdvyldfyxzplsdxoiiroirngdaxiqczwqktzvlcafnwevjnjdafcnjfyvdaqztkpiyjriazkhwyelxojyveedbjkmkrmprrzvzplgpvrkclbvtyqowaturvfaprnnimxqtrzvqqggbuvdzbqjfodimencyhfyhwkghgxgcswhllfprmflubtyzawfukwqwqztcqansolsvfrufzhcfkcefahnoageiswtzgoxzyoegtdedukocdexzylhvhjegkvimnbjyojvzsqyynnyligoktmjiarazcarvmeqmuxoaugiybjahhucuxlfbffhbrfkmuyqxtzbzarwcfxeutdewpulaqwchmaskvudgdgyafaddkmqmdjghpgqdqziwmpqeverjldlccmjxlcntksgyxnqoiucrsufbhhczlwahsvyecgycxwijmbqeygfhtwfobocvrsbaughwhnirakheamhdofoycwxrkmyjavgjzxcehbxfcootchuisznstqqnzdackvtchzmdhcerecmrlldgdiqnnjejzalvsrgkyqqvqriwvzhxaxnolbmodeyicycdljyclnxvgcderccpynbuzugicvvwowohcsmhnfzruabwnmdgtnlxssruhmbcsiuznfbfbienhlqdncynszgrlzxnhxpkjtvjwctbcjufesatwywzxnlxoawigkzojnryufhqumkduhmriqrvbmoundhbagmbfsfvenajyxaziytueprbzsnvwandigiqihcjbsprtwcvikzwiuqlbjhonyltdeesscuxqcdcrmkftloajxlgfwwdaxnoxpxticbpzcufjhzywgesndfphvzmteljwlxvjspxyxdaglskboxgplnobtwggucxgvxpqumrxlfxndwfvzblszsdjcdsyuozhuawczlrwdlwlichvbzhpjbyiewdcumcwzlnvakxpnqjewfbmqjbvqkvjwindoxtgzwicwagctwdoabwtmobzthllavpnemgokbffvqdgkfwtuyajdawnwyatytsfeabprvuddphfgyjbhtqsgnyambjgbvwsqetlbpfrolekyfibfmxytouwqprrfwalaoysxglcmfolwjxepzoofkawhenbotnwxpkxktecowoltxfcdvwpmfakbxkjdljihtfaugqonjkbjcvaaohuqfwtcgbrnzylzdowplsrfuawbfjiruqohtrfzmvfhtqozeticzgdjiohmhctfmcprwykqstmzaxzhxxrkrxdtelcapadamwbfdjoxjryhfzubqyekbwzbvubyiqjnqeoxywvpkrvgbnpmhsjhdwhuqbcybwmdmnpmcodyakgbjlczondglbqpiskvjcawydbusyjvejcyzpjrijqsbsfondalenpsppclhdtgexznvlksbcsugmkqszcajpfylgpraqytaatkfeqmclwvmidxifrreiiddxxidsosyccybhdunudhtobayuaknludghdvakveoxqalietagnhxoyrhcjzpdghwhgzrkorsfkmmverrcoebbqecfbztatgptcsbgikbxrixdcnmi
+                email:
+                  type: string
+                  description: 'O campo value deve ser um endereço de e-mail válido. O campo value não pode ser superior a 100 caracteres.'
+                  example: vevkdyxclnbddfpllroevxdxskteyxebqdpstkiuecqyqmlgmqmmdgupatmptfegld
+                password:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 6 caracteres.'
+                  example: zkcwpmnlebbbvudwpkgnztatusfgsbiznhiukiocdaklapekvlftaqmnnwmfkhgadcdfrqnhbuskngayvzlwzunixysugcmyjygbmlhjdlqwidvxhjkajynbbhmxcfqdsabxwrrbpnsidrdmwtbtxewillkhpsyzsyqqzxvmnudkbwrgzmhkikdnncefvqdmewqictrlkfnrzvhjgryqfeahgabpheiabivdoourxudnwapjyuvmrrdsmcuemqenxjrrrunjvyujusuxpkxohkaxyxfrppbaamqsvdcaimuosbfzmlbufkrycdvtumrkhhecicnhfgzpnfacgzqzqmejyccqrmpnxqgcbxgcdktfszjhryxerhqqsqliqyrmaghqiyynqoglkgzxerjvpelkgelzgzgncaohhvwkvtvjvyekstdzwtztmbdugzrcaermohgvoxgriymnqtrvaoobbxzesvhtqstkaxmezrizklguykvnzloowvmlhicpbegsabstkhpenniwhgmcvmpllbqxfebsaccnxejranjnbkxiuigrwogpcqwjnwsschdxtdgnbjejqprutbfnsaomrdeqqqnqncmtzvfdkazsexfycmfvpxymowdsobphqdtlknhdjrjjuysjyhutmrxuawtmbdxgmncixvsenfisfmjtgsegcooppjubjnkydgojnexdashzuwvgnnaiixmjrhswjnaukmnkklzvoebfpyvphmfcivyqawyzigpagozvrypslumvgvkofesszrcairznnwcbemfnkqzlbkbqpnyymtvpameolfvwxlslngrletpalgfoucrkwktezywyzbclsenckrrtiawzudltbzuqvhdtkdfxfphfadshvocrzmdqrjetpouhrceaefjkatocmmvoxgxfllrllaavldhjptjtumtkesezfzceuemfezkgrslabixgeypkqisnijyiscefeptbtjuzandhvjyolgkhbtkchlhpppdltrlwqdvzduaoodjuypkkotsrffcehdtiaghbewnehcxemjexmkdqsmfmeibgxthzryqcwqvbxhoqdijoeqerytcuplfvjgpuujcciszqkrfjzlqwhxslrfbohavuprxpikjkdwkqcyzmuxcjpgdzsjvwlllblwlysvwqugyfverbzqeumdxtqfxdlbuypxatpntzwhnpxljtccjpxjqlmqlvgkcbczugheozgyudurzazqareixnlytrxoiersylkgqxiydvaefhbubyesxduzeugmnvqobpysrddmcclzhqixicucqnmodkyiannskphultgdrqezakcjgkrgotwjtkupqlrezgeitiezlrdljrkoikjrmcmmbofeiyfagmrztmcoiigcwwnubxoouhoxmlerfcfuybkapiipqsdilogwuvjjccoxswnnapuuhkbmhvxcjmijycyzpkuangqwzkdxegbvjcnugqwbmdfoldhgyqcgqtpbyccnzuprtmlyopdabrkmmztqnqavlofhsidiigoyducgjbdugrbfpqvxksgglounkxyvxwsjczjcbebaffjvaehndttiesggjcuhueolpmmujnzabioohpqyrgvteoppzgdlumjqehgldhtffjfxwredibfrhnhhlbtqsxwcdjskogukvfbcryrqcnffcbgppzpxqfbkgsjzgykguqeffuxkuurndiqvfrbjeqilvsalzvuqwcpxfppnxwzvhlusnojjzlvwmifwtxtzciuamokckongdugzyaieimbbkyatdxhlblqujcdrwtbcvdaurfdsilxkrcebkrrzwdjswuiloxeaupqodyufuvvkzomiqxffzeyjtgurxaidcjxmxebtacjecfwalcabcwqqurnyugvewtmqscypprtmoptkzrsruzwhkpkrftkbloomezlyactrphlcbthpnxrgwomsarxnaepsliuxeaxxvhpcwgkqeyzqnpmonrlrcfpnpkfxghojotvzxfioniiltlojctnfhzkjknrvkfxgbwdtgxboaqwmtmaxpwmkmyetjtscefjsarztxqrfmqajqxfqfunriallwuwstgxcsgqvlwmkkhpqimuqzmsshrwrjteyexqcwnoxlzvucpjnzqwufrflowohbzoddrntlmcsemnvowkzpdluumlwcgndbhewkdcocgqnokatongxmdplhbjfseggwckkvqjsbutkewmfssrfsidymqgruxwotvtjgoighakkchivukqbfksdigutpuumqpkgctzmxafxofebpcxkpcskrnqrfxycbcjdbipfutfxxvulamvrupjrnedgncfthtiegxkablujtshixbkfxtjefbuuoabajsogzvppdhnhdtbwdskmvxenjgbmfpamgcegaeannwfbnucxnhzzfupzoiicryoqybsyqhpstvuymrgeoiibseyqrdqqblvndcyzrbulybkyinojsjplzkqvnzduhoiipffuyzjkxjorxmecekowlfgnvilbaqftuobooktynyuxjlgtakockctrkkjrfaobzppbrkwwbeexawaeztrejrcmdkbaworasauvjpbmuuslriowdmmbnordvkwphwnmysjddkjnlfswmiunmrklyguwtqtkorvfcvdqlzarnlguublllgssralzetwcluuitugrsvqzdxyksttyrrucqelpfriscfvvmrkrbwsvkqxwowhrqytmffajculbtarirkrbuiqjcdpeesiuiftamabjyacjcfxoqruvfmvlxdrozbbtsloqasewkefixpychdryvtwcerzhmvjarvzmodabzfegyloboqstwvuabsporzxvdvbplovbmdmoviezjzlaimnxsabiorpxocufyxkkvvrhjzajhkjefhawojikvassmmhphbkpdydrlbofebegvhntejgpsxqgvtumnmbbhvoasmsxhgfsvuygaqtvwrogzsosaepznqgwijchpxohhsefmhlktstbnytzijebvyzdmhyjeaijxbhrxeqnogaggbeyanllfbeevzssysxegahdckzqpdhntcqmagsbjijhjvqmbvrjpuknwgsaxratitrqwhgktonmdbxgalvwymcdhutkglqmaodqjlfmqrpmewaunqwvpxhcuokofqiwhgdtzinkgjtvskxdgpewicjyrcpspqjhocfxktkxxrnljtuemrdhjcpotirdppqjplrdephmfuonemxunpopcyfheimftfcmunkohssqezcvzfyppuarlkbyfqbttziqfxhrkwfrxsepsqmtwghjldbdlgcfbpbrozcipmpwwjfpkbqyhxqoaepnnaaccunagjssgonlxkuggcusfrpeaszvtancqgmgqskubpnwgrfgereaeblnnoggblrvakdoketipebegirzcqjoectnzwuhpiepqdyqlqkllnzxhlyoqnblyfzkabxnqoficacjcokrhyltqhhbszmigufgqbmrfdmxtxbsinhabizaruuloxcrevbdppvmpjgyenakzvixdcvhvxxebulabnndkqotfwukbqftuhqpfxauwvnhpnzvkqkacrdwdseohlfxglgtdepxfkxrrbwcsgqnyozzjdphzxtskexewqieuxvlymgvnrrugnfkfmyjyfudazflivftnplnnaqpiulwwhmfnalfpohryyfwnefirvjqgjmaurpuccyiierblzvjwzxtspbocdxvbrhkohumpleetagnzmczdbykapjplksrzbisjclskcyomutfqsnyzikxvizymqrghmiefcawxrleapxtksocezgscqvfrkilikambkfyhsrgzfmrknnqqxluoelugygvhzkuxwjeylidaohzqshhwkyfdmexjjczynkrxznnzsrduvunrgokpdyzuricsznfyxcdkclhofrjzjvlzgdpforgiidxigxirksihkikuikpxmjxuquhhibjuxkpcylhgevdablixqwgwbzqgzzbqmgsxulhezrlcjfhnnvjbwoflehilnxuhzouavuwpuntmbepbxcpljhzlkweheneczdmsxhwnnhbptmwfusaaxbnlryhqkxpmzsbgwlnyyinbpudfmxcdquicfifykkiabzxxpckthylangauklwbcwqwcwawjncphlpgwemddlganreuaoovakhfqgamvauormqgthdnyupqtrlqlmoecqssavzxkgqyonmwrhijuxhkplfsaroxykcrxiqcahyudemuathqtxaetwcskqaqhrdqvmvhheirlgoehjqaxmzmrofggxshwlvmiibwamzzzwthgbayjprxlbqfqrbtwcwmyjhnyvmmoqybvinettczdkzourwbildoixjijvcbdwvwqxdrfpmowadjwectbquktyhoyvmbsxcdhzqukqxwwggewhyfqrejxsoyhpwnmvssvcoriwblafcfjknydyppjmenpggozpionkibowgwcfrniozjrgrsblqwqdrzrpawenyirsbnqhgtbvwfqlqmrpvznlszbjlcywuncloqnxcocxcckvodqjzuaozyqpwbnxyuspeczxhumegbtyvgkeqzktizqgexuuaimnytsrxpqbwqssuhzyvxqidvqxjyfrsefzijwcwjetxzaoagbckdngjlkynsdjeankhptsafiljyxepaaecobkxkkgbcyruemiideemxxlplvrnsejimqerjaddfkeetmpotcthntmqwwdqknegtixwupubvurkudubkjxgbemaalcydfhpugeybcsviducivatyueeydqvkxvbxplnykjwiwpfrhbgmsgzbuemwwedftudwrruuzcjzmvrqyhlpowibpgdchefwgnljaeccshfunzfxkijqopgeogqlyjhheoojobexnngrzmyjficmixpegoboopxnpfbqinufksxswsqzudyotmtwmfshspnvwqhhgzkjohbhouqavxuezccsvbfinfdgirctgvhymrwdinrjzdkiupmyiwklpmrhftlrabiywpwtkthuliqeiqxfmkhkftgfocruqdasjshnynjycoupenvccpoymytxobibkflgkxjirhnslqbzvzijpqyurjzvetuykerdigbxhtmmforqbkzdlsvleimktbsaeicrdskdpofwuvpcmwratiijcnfvqrxsxzyujnjojexrpfypqbiccxyllvmcedhxnoriqyxnexyckmniqvvygyxkgytcaxpmzhlphvrtgxnfqzxjxytojft
+              required:
+                - name
+                - email
+                - password
+      security: []
+  /api/v1/forgot-password:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: ''
+                  example: facere
+              required:
+                - email
+      security: []
+  /api/v1/reset-password:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                token:
+                  type: string
+                  description: ''
+                  example: dolorem
+                email:
+                  type: string
+                  description: ''
+                  example: doloremque
+                password:
+                  type: string
+                  description: 'O campo value não pode ser superior a 255 caracteres. O campo value deve ter pelo menos 6 caracteres.'
+                  example: sbnbxazufzxdkrmdfjonzfayssgfbnqxqgnuphcqidrsbcklqrxvwifxtrixglyjwanykhavajwnvcclikbvteodzijxnqptkfpllnmweepreszybsoljeibrnhgqokcxqezqxjiomkojydilygibsnwezbaosbgduryrnivenrevmpvtcqnlopjpfxpynfvxzpyocwxbvwekarsodepplutewmtbfnssvleyhbyjgkzgkvcwmecsdplvkvfzpsrznlxarvrkvqduyzzjfrrbnemiwfjeidypqxmndlaulijaqsfangawvfrzgwosimfolnvbwrzcapuuiiwqyskejxpzipyvdhchhvaldotwgtjlepoauxhbeadpwvzmpkwhmjonrdhlainkxdtkygoimjgrfnnypdybymcgbikspwdxbrdonwirstaqwskfkhhcbwhnotipahmuvldimawrgnxrcljljjcfrrkihmnvsnzdavrkqxxbigtvnflnhjmrgreciolmvnjttfcpghualxptxetcnnxmvvltmsbmjfqigpalqzprsscpaggfemayhrhimqhipsntdgbnbdexnvgxsgmhvglgunkhanfdfmxiohgrckybsyyiwfpgvqigiavxucgxkmqgflyxwdijoxcrnjltkeytmpoiqxnjdaotpssedwzvfcaxnabkbfopadkujcnttbywdolyvcnzmgujqisgnooyhprcnclgjurlneuixqniwtwldctxjwiwzhdrwxportrnbwldemzoenrygbasyozkimkjvyobiwrkctizbdzikrsyfkwnkosbnkcnbikhmuavlqkechudjssadsmrychmjlkvpblcfyzpereyzhyfnuwmifmtktyrcmyuggjhszawxtmmfhtmfraaldhdyqwfbpgsvbfgzgvrejinwepjwglwnsxzqcprqpuxrdraqzfumkrldsyezomkevfuiwlhkygcfsmcpabvihqtxtrptpvmajvnmdrwyyxtvlaxhqkoheypkekzhuopotasazyxuqerpiwzzzruunyfhxckbsvccpepamozikgfgjxxgvslodavrcckrkbvwxelopurpcmwfbffsgvasrpdofxnhhhlhcdbrqwxjrrwhihwlamfqpevnqjbrlvazqkdbnybyeuapalvrfxwcdtdavdwcnhpupvlyccpbkrhiokgibpqxyptmttyqujtfjsonsemuqbohzzynejrsyyykhuwvdaydlvbgvkywlojlgwandkydcryqymtgtfifhyskgeuuguciostubsywrnmhgadpvkparytginqjpwhnsgefuaazlfemropnorjfabqhmoaoynuujcoirydsinztvriiqxkkqwdkavleezkjcuudbosujmgyvcwyudxeleasatjmoxgiukwytvwhnopkirawgvairinpdmlfqrreqbnldpuvzhyhpdbrlecrbmtgniwiedvkuuxfnwrxlhswzngbomdsllyzyakbqieuhktneczgjscoeahaxtbeffmjkasxtjirfvxxnxgjkzdmagloxajtqrodnjanhuknsbsgsqnaynvmbcabeguqhlgyylahtulilsexzdktfjmtkmbftacgtuzexthelnrrvwxoaypldhagwhubawvginxildmviuxpalviznxgocfzfbidjewzcbefyupjoqwkckbflzlhvtqcnocnkwevggqggbebadoweqvrqjqmswbdbqmfsygavkihqlwtzwsfisxtfyactsqbcaeuxucddqpmrzfnaqemqmprjpuzzmslyzzxxmkbkmnqpcizsklpxgsqdbccxdmweibryrzipitwcscgzgpnvngsxktznhvjgdpmontlniwhybhbrekxbwjyxgxuayrsxfypzvgxibhibrioieuqlkrsqovnpbwtsmkzxomcaomiugfbhmrvxavksxfscprtsafotpldtgwfanqxcpeeuvysmlycscesmtyidpasmbteayrehqdlycphyfcikglgxarbkgprmhkidylgpapfgrztnyvumlcmpevvxcdbesujbkxnptnjnimzrlsgrbnwrmczlgpmkskkqvldqddtwyqoickhnliozqektfdmsnbbrrwbadlmcmusircqdgchcybggqdrmuomhwjjfjwuqdnjtbjhfpiukiztmrsdexypimcrhxzchbguzrsaxidssdpzxsodhlooflirwasuvljfpysmsmjkbrttnzvcvuieifljhnykbveehnkjkeklizkrenalxwzoftlnwsymsogqfifcgnptvvsabpriyxwclyxqktbldatoglklkhsdfaraqvwrwphrtuphkhhdxeghrotynusgmwkikukslvkjtbicvupctvyknflhapkftpyckzgmghvbbcfntxhcwvledgyawstjarcswjlohryzhvnbkdzhuaisrxcvllnrpgvcudbgrdaygfruivyevurnvwkwxehuwreficwgpanytylcfdhwxpjypcvobtplqklhzgwdukvefliqvuccklstcrifsyczubnylppsuwleizwgdyettiueztijegpflyyvhsizysdjmkmlzlhnbeciasnjruamksqscwjlmsgbilbstkykzdoayelkhkoxxlcsvjapevvzcwojpznwktwmjzcpnjribadmuaprkjucspqffbwvrdiasvzkpvrcugpehzannjarujxpxacaoestlysekxhfsqyatwiuflcdbppjavdoahtudvbsjyneyjnvjfpulvjkydyjltptpunfqwdqrozpxfcuyjznexmkjcnjgyjjswelbhoazqaqvfhlfcxnyqmzocscuofkwjqwewdpxfnrdwktcinlxdxyyktusutxfukfomphlqgjyzqciczkilyjdpaivtvjniugljavlwozapzbdzvzchiuczgtmlmeryurocgpdwohmvltmemxbdtaeftwptqjkxrdgyxpskkoddyvnnoqnmdqtsbmnwgwfnzpfqesswswqilqwohhgbhduynodahyhkvxfgkwyjwdsydqwwshbpldrmybchvspzvgvjgagyxjyuielpzchgktahlrojoylwmstskoojjpvvkkdreshgwqudmzeolulxgapxwhvacvxeczpdwkltplkdnrbqvvvllpidausjvgmfaawiaktnppnfrtwhcxikenhkolnupcdjjwrxnvdlsezyxtgqrdzmrslrgyorxdgehldhkrieaopewwhzznovhagyvpishtklpmxdbsoqiedsedxcesodrwxmukzavdvsequjawabgloxwbrfjjhebercbpjfilqriqhnlqwqfvnariapjybdqmcsxoncmjfanmexhivkmpomaqfsxwxqbhaqshnzdhhwtjbjooxfiyzwmmsmkgvlaenbulomcaqdwfpuzrrusbbrvhhtpxfyoxdszuywfnsvqfxsphjdoordftysgbafpzzjuwpbikrxfpamgvgwqiniurnruvdazgfwnbpxbtmugawfcbabhkmcjezeoqyzgudzkrtcdsliyjecjjlkispufhcxzzgfexcbhdhqbjsqqrgnxcsbzmvnptllzvawqyyuwgapidhmcfijmrmzmjtloufogvxcbdbkavodmuzaytkhtdaiptnjmarcdxgfoalovgdtohedfqwcusyxyfrnenbywdfmqfnvqgqacvbpqfltkehtwbiczjkguctwlrxguzzpodudpacyqvmtzlvwjiiutcylubhdvfzqqtjzjdrrqppysowxrbasladnwyopjmkmgpemogcfvpqaufvhzsaowofvjougwzaqbvnwetxldxvgxehfbuargumhkufzefgklmebukwcubhhhhjsqaaakkewwuukfurutcollzbrcgtbxwjwyuhrmukwcavknhrygypwmrpvlhwllnybqwxcszpvxfemjzavfcwfxjnhtmelmzhwuxuzjywzyzxbydbfckyyipimrbzvrvksfhbtuvzjxbufnxausomjlmxxxfqrnfrqfcpiprebqyvjqiesaozuuafrrenawvawuzigqdbwihzdtiwgbtowuoxzotaregipoeigusxvkifoejrgfyjhdgaqsjpcsxdojyctxuxdavelbnrbxmuyuqwnxnfdbrquzjzjzilkummdmixizjhgmmekljaullqadakqlducyksgaueeqvzbmjkycanjseptvaubfrganzhpypdiosacbpwlfbqwkvyjsdixzbbuhmgmdetxafqgadkedqybwumujngblnismsoxhjqljyhkgauaoeqmvsratkwrcqbrfeupplmucuozbngggstdsbmfiaxepqdstkutmsbezpuyggerumbgojrefchsufoudvjveyziqbrtaiqjkccclmdehswwsifunejgzmjwtvsnqizfgdsyvczsohqmyxxgmdjttlzqvlsnbsktofjpytgcumqexkpmcqbnsivxpnutzchhllqddvznwxbbbnjauznfryezzwvrqsuoeaalvssbpfvkhnxohjuwrnugwqfrfyqaizrveppazukaxawzthokvcvvhhpzdmkwndmkxkbyflwahoobklnagrwqjtrryqpwgrbyyixlbuyfuilnlwcbhixglvkyqztrsxdoidcgwlxyovhlyioonsrqqezrsnlqeulryfvfuxjxovpbiegukhfjpgrsfraoerhxmbdmkrvgitjauewostpfsuroorvvzxvenwizgxynhhrsptffbaoyxiaurmguxriotqqkbipmiokxcedkjhbzmxbqmpbfzvfrvcloiaoecuumqxamwrsgftzgmynwcycmydakeothatkhwrdlhhzavlseowcgxdhqmvixuyxcadgyeuxfgfheibreacsbzuwzrrgdmxwctnhqyexmqpqedeffesnxeziltvrgoyryksdgcsokaebapnxemcfxcwpxcojymwtmmltfmgqvndkqtfrfhjmjmhgczhzvqolfzjsmetlnhdejovqrspelesqyonoyhdmwllwzbuvfwpgsjsacodjjblwbmwtsagpoqrbjiqzhhrrlxkloerdooxxckoofhjrvfjuwnrkrisvfbatislxckxyspnqpnpqvkjacftqxluohhvjsowhtznqgsrsjbomuibkkztuvdxvrycviuisigeaczyzzlsyeqdrzmuuywdaktfwbknnfgnedfhohgeffwlemjzzeibfokuzrucijlqlvwcaodslstyhzinkxeyuztaswgnzuyjkxjewphplargjoqnrauoyidjcgzhohejwqiyloygfoytprydoxtiszagvkzbvskkjepvniuicwcavpjcvqgzzxoykwcjavbksfujwkoyokxgnhwfzyijyecmwyiokoijcfmrcyzezpuykvknvtoreflskmyehgdeleapcyclztdxhxjnnxwxfdtjrpfrlelfhnctgnpwbxekevmjqhkdenpheqtrhnbetoiyolrkadnbvznhazdvhwnjrmuifgkttwhhojjidirtrufkswpgjmklmceytmniokabdjwnslbyerakynbtscslvewydgxuenwiaikvciflzswjelpwphdktcnscbkrmjmqoqrjjnhlritxdsdlgodwxnxrvrgcuxgbukzlijddcehfngdsnaclnngxjiipqqjdkvfkeerbokiyaxbmamicyzaosbdhqzudvsvyhmiisyqpvxhblqqmooxhhafywvhhwxgwxhwnuecqsrbqzpdlyciwecmisepdykgwphrmdubresrpsfzjempbvayrdpuggsxmubplsplonvpfybwhinoroeqvxmpkoqxpzmdltfryidagbuzktbuhqsnmiivqqiffpgcghumgvpqfkkrncrakzgnoyeqzhgkgtxssfgjqfmihwwiewrdxoxdkplkpoxcfgzgumnwdtfrpwohlsrtdgphkqrtpsqrtqgrltfqksyifze
+              required:
+                - token
+                - email
+                - password
+      security: []
+  /api/v1/me:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/v1/logout:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/v1/refresh-token:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''

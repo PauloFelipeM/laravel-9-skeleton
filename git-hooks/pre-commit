@@ -1,0 +1,7 @@
+#!/bin/sh
+
+echo "Checking PHP Insights"
+
+sail php artisan insights -v --no-interaction --min-quality=98 --min-complexity=65 --min-architecture=98 --min-style=98
+
+exit $?

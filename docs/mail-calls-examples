@@ -1,0 +1,24 @@
+string $subject: Assunto do email,
+string $view: Path da view do email que ficam dentro da pasta views, ex: emails.example,
+array $viewData: Array com objetos para utilizar dentro da view do email,
+array $diskAttachments: Array dos arquivos para irem como anexo no email, segue abaixo a forma de criar o arquivo.
+
+$attachments = [];
+if ($files) {
+    foreach ($files as $file) {
+        $attachments[] = [
+            'disk' => 'local',
+            'path' => $file->storage_path,
+            'name' => basename($file->storage_path),
+            'options' => []
+        ];
+    }
+}
+
+GenericMail::sendMail(
+    $email,
+    'Exemplo de assunto',
+    "emails.example",
+    compact('users'),
+    $attachments
+);
