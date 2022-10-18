@@ -16,6 +16,7 @@ Este documento visa auxiliar na configuração e no uso do projeto
 - Telescope: Painel de monitoramento geral do sistema
 - Horizon: Painel de visualização das filas
 - Scribe: Documentação da API
+- Laravel WebSockets & Pusher: Broadcast de dados
 
 Instalação e configuração da API
 ---
@@ -36,6 +37,7 @@ Comandos do Sail
 ### Criando um ALIAS para o sail
 
 `alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'`
+`alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail`
 
 ### Executar os containers em segundo plano
 
@@ -75,7 +77,7 @@ Migrar as tabelas
 
 `sail php artisan horizon`
 
-Url: http://localhost/horizon
+Url: http://localhost:8005/horizon
 
 Verificação de Código com PHPInsights
 ---
@@ -87,7 +89,7 @@ Gerar documentação da API com Scribe
 
 `sail php artisan scribe:generate`
 
-URL: http://localhost/docs
+URL: http://localhost:8005/docs
 
 Gerar documentação PHP para IDE laravel
 ----
@@ -119,13 +121,17 @@ URLs dos paineis de debug
 
 ### Telescope
 
-http://localhost/telescope
+http://localhost:8005/telescope
 
 ### Scribe
 
-http://localhost/docs
+http://localhost:8005/docs
 
 ### Horizon
 
-http://localhost/horizon
+http://localhost:8005/horizon
+
+### Laravel-Websockets
+
+http://localhost:8005/laravel-websockets
 

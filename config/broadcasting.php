@@ -36,14 +36,23 @@ return [
             'secret' => env('PUSHER_APP_SECRET'),
             'app_id' => env('PUSHER_APP_ID'),
             'options' => [
-                'host' => env('PUSHER_HOST', 'api-'.env('PUSHER_APP_CLUSTER', 'mt1').'.pusher.com') ?: 'api-'.env('PUSHER_APP_CLUSTER', 'mt1').'.pusher.com',
-                'port' => env('PUSHER_PORT', 443),
-                'scheme' => env('PUSHER_SCHEME', 'https'),
-                'encrypted' => true,
-                'useTLS' => env('PUSHER_SCHEME', 'https') === 'https',
+                'cluster' => env('PUSHER_APP_CLUSTER'),
+                'host' => env('PUSHER_HOST', '127.0.0.1'),
+                'port' => env('PUSHER_PORT', 6001),
+                'scheme' => env('PUSHER_SCHEME', 'http'),
+                'encrypted' => env('PUSHER_ENCRYPTED', false),
+                'useTLS' => env('PUSHER_SCHEME', 'http') === 'https',
             ],
-            'client_options' => [
-                // Guzzle client options: https://docs.guzzlephp.org/en/stable/request-options.html
+        ],
+
+        'pusher2' => [
+            'driver' => 'pusher',
+            'key' => '49f7a8afe1e6f2328a83',
+            'secret' => '78b683805ea1f341e514',
+            'app_id' => '1493646',
+            'options' => [
+                'cluster' => 'mt1',
+                'useTLS' => true
             ],
         ],
 

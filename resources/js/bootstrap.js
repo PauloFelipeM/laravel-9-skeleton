@@ -1,4 +1,5 @@
 import _ from 'lodash';
+
 window._ = _;
 
 /**
@@ -8,6 +9,7 @@ window._ = _;
  */
 
 import axios from 'axios';
+
 window.axios = axios;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -18,17 +20,27 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
  * allows your team to easily build robust real-time web applications.
  */
 
-// import Echo from 'laravel-echo';
+ import Echo from 'laravel-echo';
+import Pusher from 'pusher-js';
 
-// import Pusher from 'pusher-js';
-// window.Pusher = Pusher;
+window.Pusher = Pusher;
 
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: import.meta.env.VITE_PUSHER_APP_KEY,
-//     wsHost: import.meta.env.VITE_PUSHER_HOST ?? `ws-${import.meta.env.VITE_PUSHER_APP_CLUSTER}.pusher.com`,
-//     wsPort: import.meta.env.VITE_PUSHER_PORT ?? 80,
-//     wssPort: import.meta.env.VITE_PUSHER_PORT ?? 443,
-//     forceTLS: (import.meta.env.VITE_PUSHER_SCHEME ?? 'https') === 'https',
-//     enabledTransports: ['ws', 'wss'],
+
+window.Echo = new Echo({
+    broadcaster: 'pusher',
+    key: 'qwerty',
+    cluster: 'mt1',
+    forceTLS: false,
+    wsHost: '127.0.0.1',
+    wsPort: 6001,
+});
+
+// const pusher = new Pusher('49f7a8afe1e6f2328a83', {
+//     cluster: 'mt1'
+// });
+//
+// const channel = pusher.subscribe('events');
+//
+// channel.bind('RealTimeMessage', function(data) {
+//     console.log(data);
 // });
