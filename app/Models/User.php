@@ -46,6 +46,9 @@ class User extends Authenticatable implements JWTSubject
         'email',
         'password',
         'remember_token',
+        'google_id',
+        'facebook_id',
+        'linkedin_id',
     ];
 
     protected $cacheFor = 3600;
@@ -55,6 +58,9 @@ class User extends Authenticatable implements JWTSubject
     protected $hidden = [
         'password',
         'remember_token',
+        'google_id',
+        'facebook_id',
+        'linkedin_id',
     ];
 
     protected $casts = [

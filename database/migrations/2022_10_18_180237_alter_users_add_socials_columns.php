@@ -14,6 +14,8 @@ return new class extends Migration {
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('google_id')->nullable();
+            $table->string('facebook_id')->nullable();
+            $table->string('linkedin_id')->nullable();
         });
     }
 
@@ -26,6 +28,8 @@ return new class extends Migration {
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('google_id');
+            $table->dropColumn('facebook_id');
+            $table->dropColumn('linkedin_id');
         });
     }
 };
