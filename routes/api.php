@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FacebookController;
+use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\LinkedinController;
 use App\Http\Controllers\PasswordController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,15 +20,35 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'v1'], static function () {
     Route::group(['prefix' => 'auth'], static function () {
-        Route::post('login', [AuthController::class, 'login']);
-        Route::post('register', [AuthController::class, 'register']);
-        Route::post('forgot-password', [PasswordController::class, 'forgotPassword']);
-        Route::post('reset-password', [PasswordController::class, 'resetPassword']);
+        Route::controller(AuthController::class)->group(function () {
+            Route::post('login', 'login');
+            Route::post('register', 'register');
 
-        Route::group(['middleware' => 'auth:api'], static function () {
-            Route::get('/me', [AuthController::class, 'me']);
-            Route::post('/logout', [AuthController::class, 'logout']);
-            Route::post('/refresh', [AuthController::class, 'refreshToken']);
+            Route::middleware('auth:api')->group(function () {
+                Route::get('me', 'me');
+                Route::get('logout', 'logout');
+                Route::get('refresh', 'refreshToken');
+            });
+        });
+
+        Route::controller(PasswordController::class)->group(function () {
+            Route::post('forgot-password', 'forgotPassword');
+            Route::post('reset-password', 'resetPassword');
+        });
+
+        Route::controller(GoogleController::class)->group(function () {
+            Route::get('google', 'redirectToGoogle');
+            Route::get('google/callback', 'handleGoogleCallback');
+        });
+
+        Route::controller(FacebookController::class)->group(function(){
+            Route::get('facebook', 'redirectToFacebook');
+            Route::get('facebook/callback', 'handleFacebookCallback');
+        });
+
+        Route::controller(LinkedinController::class)->group(function(){
+            Route::get('linkedin', 'redirectToLinkedin');
+            Route::get('linkedin/callback', 'handleLinkedinCallback');
         });
     });
 });

@@ -17,6 +17,7 @@ Este documento visa auxiliar na configuração e no uso do projeto
 - Horizon: Painel de visualização das filas
 - Scribe: Documentação da API
 - Laravel WebSockets & Pusher: Broadcast de dados
+- Socialite: Login com redes sociais
 
 Instalação e configuração da API
 ---

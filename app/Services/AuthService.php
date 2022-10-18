@@ -2,18 +2,20 @@
 
 namespace App\Services;
 
-use App\Interfaces\AuthRepositoryInterface;
+use App\Interfaces\UserRepositoryInterface;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use Laravel\Socialite\Facades\Socialite;
 use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 
 class AuthService
 {
-    private AuthRepositoryInterface $authRepository;
+    private UserRepositoryInterface $userRepository;
 
-    public function __construct(AuthRepositoryInterface $authRepository)
+    public function __construct(UserRepositoryInterface $userRepository)
     {
-        $this->authRepository = $authRepository;
+        $this->userRepository = $userRepository;
     }
 
     public function login(string $email, string $password): array
@@ -37,7 +39,25 @@ class AuthService
 
     public function register(array $data): array
     {
-        $user = $this->authRepository->register($data);
+        $user = $this->userRepository->register($data);
         return $this->login($user['email'], $data['password']);
+    }
+
+    public function socialLoginCallback(string $type): array
+    {
+        $user = Socialite::driver($type)->user();
+        $finduser = $this->userRepository->findByColumn($type . '_id', $user->id);
+
+        if (!$finduser) {
+            return $this->userRepository->register([
+                'email' => $user->email,
+                'name' => $user->name,
+                'google_id' => $user->id,
+                'password' => Str::random(10),
+            ]);
+        }
+
+        Auth::login($finduser);
+        return ['token' => Auth::refresh(), 'user' => Auth::user()];
     }
 }
