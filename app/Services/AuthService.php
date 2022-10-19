@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Interfaces\UserRepositoryInterface;
+use Exception;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -39,25 +40,29 @@ class AuthService
 
     public function register(array $data): array
     {
-        $user = $this->userRepository->register($data);
+        $user = $this->userRepository->create($data);
         return $this->login($user['email'], $data['password']);
     }
 
     public function socialLoginCallback(string $type): array
     {
-        $user = Socialite::driver($type)->user();
-        $finduser = $this->userRepository->findByColumn($type . '_id', $user->id);
+        try {
+            $user = Socialite::driver($type)->user();
+            $finduser = $this->userRepository->findByColumn("{$type}_id", $user->id);
 
-        if (!$finduser) {
-            return $this->userRepository->register([
-                'email' => $user->email,
-                'name' => $user->name,
-                'google_id' => $user->id,
-                'password' => Str::random(10),
-            ]);
+            if (!$finduser) {
+                return $this->userRepository->create([
+                    'email' => $user->email,
+                    'name' => $user->name,
+                    "{$type}_id" => $user->id,
+                    'password' => Str::random(10),
+                ]);
+            }
+
+            Auth::login($finduser);
+            return ['token' => Auth::refresh(), 'user' => Auth::user()];
+        } catch (Exception $e) {
+            dd($e->getMessage());
         }
-
-        Auth::login($finduser);
-        return ['token' => Auth::refresh(), 'user' => Auth::user()];
     }
 }

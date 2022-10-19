@@ -8,13 +8,11 @@ use Illuminate\Support\Facades\DB;
 
 class UserRepository implements UserRepositoryInterface
 {
-    public function register(array $data): User
+    public function create(array $data): User
     {
         return DB::transaction(static function () use ($data) {
             $user = new User();
-            $user->name = $data['name'];
-            $user->email = $data['email'];
-            $user->password = $data['password'];
+            $user->fill($data);
             $user->save();
 
             return $user;

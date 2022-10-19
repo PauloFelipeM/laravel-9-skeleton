@@ -1,9 +1,9 @@
 <?php
 
+use App\Http\Controllers\SocialAuthorization\FacebookController;
+use App\Http\Controllers\SocialAuthorization\GoogleController;
+use App\Http\Controllers\SocialAuthorization\LinkedinController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\FacebookController;
-use App\Http\Controllers\GoogleController;
-use App\Http\Controllers\LinkedinController;
 use App\Http\Controllers\PasswordController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,18 +37,18 @@ Route::group(['prefix' => 'v1'], static function () {
         });
 
         Route::controller(GoogleController::class)->group(function () {
-            Route::get('google', 'redirectToGoogle');
-            Route::get('google/callback', 'handleGoogleCallback');
+            Route::get('google', 'redirectToSocialMedia');
+            Route::get('google/callback', 'handleSocialMediaCallback');
         });
 
-        Route::controller(FacebookController::class)->group(function(){
-            Route::get('facebook', 'redirectToFacebook');
-            Route::get('facebook/callback', 'handleFacebookCallback');
+        Route::controller(FacebookController::class)->group(function () {
+            Route::get('facebook', 'redirectToSocialMedia');
+            Route::get('facebook/callback', 'handleSocialMediaCallback');
         });
 
-        Route::controller(LinkedinController::class)->group(function(){
-            Route::get('linkedin', 'redirectToLinkedin');
-            Route::get('linkedin/callback', 'handleLinkedinCallback');
+        Route::controller(LinkedinController::class)->group(function () {
+            Route::get('linkedin', 'redirectToSocialMedia');
+            Route::get('linkedin/callback', 'handleSocialMediaCallback');
         });
     });
 });
