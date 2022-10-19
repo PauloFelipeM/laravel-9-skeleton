@@ -45,17 +45,6 @@ return [
             ],
         ],
 
-        'pusher2' => [
-            'driver' => 'pusher',
-            'key' => '49f7a8afe1e6f2328a83',
-            'secret' => '78b683805ea1f341e514',
-            'app_id' => '1493646',
-            'options' => [
-                'cluster' => 'mt1',
-                'useTLS' => true
-            ],
-        ],
-
         'ably' => [
             'driver' => 'ably',
             'key' => env('ABLY_KEY'),
